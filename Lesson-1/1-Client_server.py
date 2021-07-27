@@ -8,6 +8,10 @@ def getRepo(USERNAME):
     url = f'https://api.github.com/users/{USERNAME}/repos'
     response = requests.get(url, headers = header)
     result = response.json()
+    for repository in result:
+        if not repository['private']:
+            print(repository['name'])
+   
 
     # Save result in json
     with open('see.json', 'w') as outfile:
