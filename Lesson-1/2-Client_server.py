@@ -1,10 +1,11 @@
 import requests
 import json
+from bearer import token 
 
 url = 'https://the-one-api.dev/v2/quote'
 headers = {
     'Accept': 'application/json',
-    'Authorization': 'Bearer iwd7iLwSup56-Ib5Rnqx '
+    'Authorization': token
 }
 
 
